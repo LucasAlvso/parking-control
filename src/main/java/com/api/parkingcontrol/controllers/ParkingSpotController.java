@@ -45,4 +45,10 @@ public class ParkingSpotController
         parkingSpotModel.setRegistrationDate(LocalDateTime.now(ZoneId.of("UTC")));
         return ResponseEntity.status(HttpStatus.CREATED).body(parkingSpotService.save(parkingSpotModel));
     }
+
+    @GetMapping
+    public ResponseEntity<Object> getAllParkingSpots()
+    {
+        return ResponseEntity.status(HttpStatus.OK).body(parkingSpotService.findAll());
+    }
 }
