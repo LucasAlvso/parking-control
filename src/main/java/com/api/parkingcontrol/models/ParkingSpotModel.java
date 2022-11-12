@@ -2,7 +2,6 @@ package com.api.parkingcontrol.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -18,7 +17,7 @@ public class ParkingSpotModel implements Serializable
     @Column(nullable = false, unique = true, length = 10)
     private String parkingSpotNumber;
     @Column(nullable = false, unique = true, length = 7)
-    private String licensePlate;
+    private String carLicensePlate;
     @Column(nullable = false, unique = false, length = 70)
     private String carBrand;
     @Column(nullable = false, unique = false, length = 70)
@@ -50,12 +49,12 @@ public class ParkingSpotModel implements Serializable
         this.parkingSpotNumber = parkingSpotNumber;
     }
 
-    public String getLicensePlate() {
-        return licensePlate;
+    public String getCarLicensePlate() {
+        return carLicensePlate;
     }
 
-    public void setLicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
+    public void setCarLicensePlate(String carLicensePlate) {
+        this.carLicensePlate = carLicensePlate;
     }
 
     public String getCarBrand() {

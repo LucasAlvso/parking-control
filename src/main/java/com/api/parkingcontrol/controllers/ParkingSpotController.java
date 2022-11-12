@@ -87,7 +87,7 @@ public class ParkingSpotController
         }
         var parkingSpotModel = parkingSpotModelOptional.get();
         parkingSpotModel.setParkingSpotNumber(parkingSpotDTO.getParkingSpotNumber());
-        parkingSpotModel.setLicensePlate(parkingSpotDTO.getCarLicensePlate());
+        parkingSpotModel.setCarLicensePlate(parkingSpotDTO.getCarLicensePlate());
         parkingSpotModel.setCarBrand(parkingSpotDTO.getCarBrand());
         parkingSpotModel.setCarModel(parkingSpotDTO.getCarModel());
         parkingSpotModel.setCarColor(parkingSpotDTO.getCarColor());
